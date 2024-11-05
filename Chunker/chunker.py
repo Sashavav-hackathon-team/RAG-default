@@ -1,7 +1,7 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-with open("Data/MaiaSandu.txt") as f:
-    state_of_the_union = f.read()
+f = open("Data/input.txt", "r", encoding="utf-8")
+s = f.read()
 
 
 text_splitter = RecursiveCharacterTextSplitter(
@@ -11,6 +11,7 @@ text_splitter = RecursiveCharacterTextSplitter(
     length_function=len,
     is_separator_regex=False,
 )
-docs = text_splitter.split_text(state_of_the_union)
+docs = text_splitter.split_text(s)
+pf = open("Data/output.txt", "w", encoding="utf-8")
 for doc in docs:
-    print(doc, end="\n-----------------------------------\n")
+    pf.write(doc + "\n" + "-"*30 + "\n")
