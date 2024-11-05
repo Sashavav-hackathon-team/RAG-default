@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "rag-default"
+version = "0.1.0"
+description = ""
+authors = ["Sashavav <vav110011@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = "^2.5.1"
+llama-index = "^0.11.21"
+langchain-community = "^0.3.5"
+llama-index-core = "^0.11.22"
+openai = "^1.54.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
