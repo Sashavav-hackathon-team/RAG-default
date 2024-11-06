@@ -23,7 +23,7 @@ def ask_question(question):
     return completion.choices[0].message.content
 
 
-f = open("Data/Henry.txt", "r", encoding='utf-8')
+f = open("../data/Henry.txt", "r", encoding='utf-8')
 s = f.read()
 s = s.replace("\n", " ")
 pf = open("Data/input.txt", "w", encoding='utf-8')

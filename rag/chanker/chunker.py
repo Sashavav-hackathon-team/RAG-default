@@ -1,6 +1,6 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-f = open("Data/input.txt", "r", encoding="utf-8")
+f = open("../data/input.txt", "r", encoding="utf-8")
 s = f.read()
 
 
