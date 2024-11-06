@@ -13,3 +13,5 @@ def encode(model="BAAI/bge-m3"):
         documents,
     )
     return np.array(index)
+
+# https://docs.llamaindex.ai/en/stable/understanding/storing/storing/ - про хранение индексов

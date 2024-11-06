@@ -1,5 +1,5 @@
 from openai import OpenAI
-import rag.chanker.embedding as embedding
+import rag.chunker.embedding as embedding
 
 # Set the base URL to your LM Studio server
 client = OpenAI(base_url="http://localhost:1234/v1", api_key="lm-studio")

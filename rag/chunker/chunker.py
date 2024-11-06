@@ -11,7 +11,7 @@ def RecursiveChunker(name: str, chunk_size=200) -> str:
         length_function=len,
         is_separator_regex=False,
     )
-    new_path = "../data/out_" + name
+    new_path = "../data/chunked_" + name
     docs = text_splitter.split_text(s)
     pf = open(new_path, "w", encoding="utf-8")
     for doc in docs:
@@ -43,7 +43,7 @@ def LLMChanker(name: str) -> str:
     f = open("../data/" + name, "r", encoding='utf-8')
     s = f.read()
     s = s.replace("\n", " ")
-    new_path = "../data/out_" + name
+    new_path = "../data/chunked_" + name
     pf = open(new_path, "w", encoding='utf-8')
     for i in range(100, len(s) - 100, 300):
         answer = ask_question(s[i - 100:i + 400])
