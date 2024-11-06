@@ -14,6 +14,9 @@ llama-index-core = "^0.11.22"
 openai = "^1.54.1"
 llama-index-llms-ollama = "^0.3.4"
 llama-index-embeddings-huggingface = "^0.3.1"
+pypdf2 = "^3.0.1"
+pymupdf = "^1.24.13"
+tqdm = "^4.66.6"
 
 
 [build-system]
