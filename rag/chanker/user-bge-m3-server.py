@@ -1,4 +1,5 @@
 from openai import OpenAI
+import rag.chanker.embedding as embedding
 
 # Set the base URL to your LM Studio server
 client = OpenAI(base_url="http://localhost:1234/v1", api_key="lm-studio")
@@ -8,6 +9,7 @@ def get_embeddings(texts, model="BAAI/bge-m3"):
     texts = [text.replace("\n", " ") for text in texts]
     return client.embeddings.create(input=texts, model=model).data
 
+a = embedding.encode()
 
 import numpy as np
 import scipy.spatial.distance as ds
