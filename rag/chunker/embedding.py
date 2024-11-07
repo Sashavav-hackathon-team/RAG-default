@@ -15,3 +15,4 @@ def encode(model="BAAI/bge-m3"):
     return np.array(index)
 
 # https://docs.llamaindex.ai/en/stable/understanding/storing/storing/ - про хранение индексов
+print(encode(model="BAAI/bge-m3"))
