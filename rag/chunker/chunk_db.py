@@ -15,7 +15,7 @@ Settings.llm = Ollama(model="llama3", request_timeout=360.0)
 documents = SimpleDirectoryReader("prepared").load_data()
 
 # initialize client, setting path to save data
-db = chromadb.PersistentClient(path="./chroma_db")
+db = chromadb.PersistentClient(path="chroma_db")
 
 # create collection
 chroma_collection = db.get_or_create_collection("quickstart")
