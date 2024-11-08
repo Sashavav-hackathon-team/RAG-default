@@ -19,18 +19,6 @@ def answer_with_documentation(doc_array: list[str] | str, query: str, client: Op
     )
 
     documentation = "\n".join(doc_array)
-
-    '''completion = client.chat.completions.create(
-        model="model-identifier",
-        messages=[
-            {"role": "system", "content": rules},
-            {"role": "user", "content": f"Документация:{documentation} Запрос: {query}"}
-        ],
-        temperature=0.7,
-    )
-
-    response = completion.choices[0].message.content
-    return response'''
     query = f"Документация:{documentation} Запрос: {query}"
     return run_model(query=query, rules=rules, client=client)
 

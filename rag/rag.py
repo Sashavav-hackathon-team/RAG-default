@@ -44,5 +44,5 @@ rag = Rag()
 #print(rag.search_in_documents("Кто такой Генрих 13"))
 #print(rag.chunker.create_chunk_db())
 #print(rag.search_in_documents(""))
-question = "Основные компоненты RAG модели"
+question = "Сколько у генриха 13 было сыновей"
 print(rag.query(question))

@@ -164,4 +164,4 @@ class Chunker:
         # response = query_engine.query("Кто такой генрих 13?")
         retrieval_engine = index.as_retriever()
         response = retrieval_engine.retrieve(query)
-        return response[0].text
+        return list(response[i].text for i in range(len(response)))
